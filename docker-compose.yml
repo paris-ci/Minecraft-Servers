@@ -7,6 +7,7 @@ services:
     restart: unless-stopped
     image: itzg/bungeecord
     environment:
+      TYPE: "VELOCITY"
       BUNGEE_JAR_REVISION: "1"
       CFG_MOTD: "The first minecraft server powered by ducks."
       REPLACE_ENV_VARIABLES: "true"
