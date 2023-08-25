@@ -31,7 +31,7 @@ services:
       TYPE: "PAPER"
       SPIGET_RESOURCES: "81534,1997,111876,106031,80692,81890,102621,17311,14458"
       USE_AIKAR_FLAGS: "true"
-      MEMORY: "8G"
+      MEMORY: "6G"
       ONLINE_MODE: "FALSE"
     volumes:
       # attach the relative directory 'data' to the container's /data path
@@ -49,7 +49,7 @@ services:
       TYPE: "PAPER"
       SPIGET_RESOURCES: ""
       USE_AIKAR_FLAGS: "true"
-      MEMORY: "8G"
+      MEMORY: "1G"
       ONLINE_MODE: "FALSE"
     volumes:
       # attach the relative directory 'data' to the container's /data path
