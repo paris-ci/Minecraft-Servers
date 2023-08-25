@@ -62,7 +62,12 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: "PAPER"
-      SPIGET_RESOURCES: ""
+      # 1997 -> ProtocolLib
+      # 106031 -> ImageFrame
+      # 80692 -> SurvivalInvisiframes
+      # 102621 -> DNamePing Chat Pinging Plugin
+      # 17311 -> WorldEditSelectionVisualizer
+      SPIGET_RESOURCES: "1997,106031,80692,102621,17311"
       USE_AIKAR_FLAGS: "true"
       MEMORY: "1G"
       ONLINE_MODE: "FALSE"
