@@ -14,7 +14,7 @@ services:
     ports:
       - "25565:25577"
     volumes:
-      - /root/bungee_config.yml:/config/config.yml
+      - /root/mcbungeecord_config:/config
       - /root/mcbungeecord:/server
 
   mc_main:
