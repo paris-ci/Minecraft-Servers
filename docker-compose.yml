@@ -67,3 +67,5 @@ services:
       POSTGRES_DB: "minecraft"
       POSTGRES_USER: "minecraft"
       POSTGRES_PASSWORD: "minecraft"
+    volumes:
+      - /root/psql_db:/var/lib/postgresql/data
