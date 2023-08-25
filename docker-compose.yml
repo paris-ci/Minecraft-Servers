@@ -20,12 +20,12 @@ services:
       - database
       - minecraft
 
-  mc_main:
+  mcmain:
     image: itzg/minecraft-server
     tty: true
     stdin_open: true
-    container_name: mc_main
-    hostname: mc_main
+    container_name: mcmain
+    hostname: mcmain
     restart: unless-stopped
     ports:
       - "8123:8123"
@@ -43,12 +43,12 @@ services:
       - database
       - minecraft
 
-  mc_funny:
+  mcfunny:
     image: itzg/minecraft-server
     tty: true
     stdin_open: true
-    container_name: mc_funny
-    hostname: mc_funny
+    container_name: mcfunny
+    hostname: mcfunny
     restart: unless-stopped
     environment:
       EULA: "TRUE"
@@ -67,8 +67,8 @@ services:
 
   psql_db:
     image: postgres:latest
-    container_name: psql_db
-    hostname: psql_db
+    container_name: psqldb
+    hostname: psqldb
     restart: unless-stopped
     ports:
       - "127.0.0.1:5432:5432"
