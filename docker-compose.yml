@@ -16,6 +16,9 @@ services:
       - "25565:25577"
     volumes:
       - /root/mcbungeecord:/server
+    networks:
+      - database
+      - minecraft
 
   mc_main:
     image: itzg/minecraft-server
@@ -36,6 +39,9 @@ services:
     volumes:
       # attach the relative directory 'data' to the container's /data path
       - /root/mcdata:/data
+    networks:
+      - database
+      - minecraft
 
   mc_funny:
     image: itzg/minecraft-server
@@ -54,6 +60,9 @@ services:
     volumes:
       # attach the relative directory 'data' to the container's /data path
       - /root/mcfunny:/data
+    networks:
+      - database
+      - minecraft
 
 
   psql_db:
@@ -69,3 +78,11 @@ services:
       POSTGRES_PASSWORD: "minecraft"
     volumes:
       - /root/psql_db:/var/lib/postgresql/data
+    networks:
+      - database
+
+
+networks:
+  minecraft:
+  database:
+
