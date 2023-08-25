@@ -12,6 +12,9 @@ services:
       CFG_MOTD: "The first minecraft server powered by ducks."
       REPLACE_ENV_VARIABLES: "true"
       ICON: "https://github.com/DuckHunt-discord/DHV4/blob/master/src/assets/Avatars/cartographer_duck_Calgeka.png?raw=true"
+      ENABLE_RCON: "true"
+      RCON_PASSWORD: "minecraft"
+      RCON_PORT: "25588"
     ports:
       - "25565:25577"
     volumes:
