@@ -64,6 +64,6 @@ services:
     ports:
       - "127.0.0.1:5432:5432"
     environment:
-      DB_NAME: "minecraft"
-      DB_USER: "minecraft"
-      DB_PASS: "minecraft"
+      POSTGRES_DB: "minecraft"
+      POSTGRES_USER: "minecraft"
+      POSTGRES_PASSWORD: "minecraft"
