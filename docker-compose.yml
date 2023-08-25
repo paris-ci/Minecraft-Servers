@@ -15,7 +15,6 @@ services:
     ports:
       - "25565:25577"
     volumes:
-      - /root/mcbungeecord_config:/config
       - /root/mcbungeecord:/server
 
   mc_main:
