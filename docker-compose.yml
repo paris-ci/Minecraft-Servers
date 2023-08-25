@@ -1,0 +1,69 @@
+version: "3.8"
+
+services:
+  bungeecord:
+    hostname: bungeecord
+    container_name: bungeecord
+    restart: unless-stopped
+    image: itzg/bungeecord
+    environment:
+      BUNGEE_JAR_REVISION: "1"
+      CFG_MOTD: "The first minecraft server powered by ducks."
+      REPLACE_ENV_VARIABLES: "true"
+      ICON: "https://github.com/DuckHunt-discord/DHV4/blob/master/src/assets/Avatars/cartographer_duck_Calgeka.png?raw=true"
+    ports:
+      - "25565:25577"
+    volumes:
+      - /root/bungee_config.yml:/config/config.yml
+      - /root/mcbungeecord:/server
+
+  mc_main:
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    container_name: mc_main
+    hostname: mc_main
+    restart: unless-stopped
+    ports:
+      - "8123:8123"
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      SPIGET_RESOURCES: "81534,1997,111876,106031,80692,81890,102621,17311,14458"
+      USE_AIKAR_FLAGS: "true"
+      MEMORY: "8G"
+      ONLINE_MODE: "FALSE"
+    volumes:
+      # attach the relative directory 'data' to the container's /data path
+      - /root/mcdata:/data
+
+  mc_funny:
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    container_name: mc_funny
+    hostname: mc_funny
+    restart: unless-stopped
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      SPIGET_RESOURCES: ""
+      USE_AIKAR_FLAGS: "true"
+      MEMORY: "8G"
+      ONLINE_MODE: "FALSE"
+    volumes:
+      # attach the relative directory 'data' to the container's /data path
+      - /root/mcfunny:/data
+
+
+  psql_db:
+    image: postgres:latest
+    container_name: psql_db
+    hostname: psql_db
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      DB_NAME: "minecraft"
+      DB_USER: "minecraft"
+      DB_PASS: "minecraft"
