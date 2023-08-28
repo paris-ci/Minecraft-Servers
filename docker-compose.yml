@@ -46,7 +46,8 @@ services:
       # 14458 -> Ultimate Name Color
       # 88135 -> PlugManX
       # 111975 -> AxInventoryRestore
-      SPIGET_RESOURCES: "1997,111876,106031,80692,81890,102621,17311,88135,111975"
+      # 95926 -> Sussy
+      SPIGET_RESOURCES: "1997,111876,106031,80692,81890,102621,17311,88135,111975,95926"
       USE_AIKAR_FLAGS: "true"
       MEMORY: "6G"
       ONLINE_MODE: "FALSE"
