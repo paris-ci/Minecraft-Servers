@@ -44,7 +44,8 @@ services:
       # 102621 -> DNamePing Chat Pinging Plugin
       # 17311 -> WorldEditSelectionVisualizer
       # 14458 -> Ultimate Name Color
-      SPIGET_RESOURCES: "1997,111876,106031,80692,81890,102621,17311"
+      # 88135 -> PlugManX
+      SPIGET_RESOURCES: "1997,111876,106031,80692,81890,102621,17311,88135"
       USE_AIKAR_FLAGS: "true"
       MEMORY: "6G"
       ONLINE_MODE: "FALSE"
@@ -70,7 +71,8 @@ services:
       # 80692 -> SurvivalInvisiframes
       # 102621 -> DNamePing Chat Pinging Plugin
       # 17311 -> WorldEditSelectionVisualizer
-      SPIGET_RESOURCES: "1997,106031,80692,102621,17311"
+      # 88135 -> PlugManX
+      SPIGET_RESOURCES: "1997,106031,80692,102621,17311,88135"
       USE_AIKAR_FLAGS: "true"
       MEMORY: "1G"
       ONLINE_MODE: "FALSE"
