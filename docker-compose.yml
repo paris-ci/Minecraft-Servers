@@ -85,6 +85,39 @@ services:
     networks:
       - database
       - minecraft
+  mcplugins:
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    container_name: mcplugins
+    hostname: mcplugins
+    restart: unless-stopped
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      ## 81534 -> chunky
+      # 1997 -> ProtocolLib
+      # 111876 -> BetterGraves
+      # 106031 -> ImageFrame
+      # 80692 -> SurvivalInvisiframes
+      # 81890 -> ContainerPassthrough
+      # 102621 -> DNamePing Chat Pinging Plugin
+      # 17311 -> WorldEditSelectionVisualizer
+      # 14458 -> Ultimate Name Color
+      # 88135 -> PlugManX
+      # 111975 -> AxInventoryRestore
+      # 95926 -> Sussy
+      # 81 -> LibsDisguises
+      SPIGET_RESOURCES: "1997,111876,106031,80692,81890,102621,17311,88135,111975,95926,81"
+      USE_AIKAR_FLAGS: "true"
+      MEMORY: "2G"
+      ONLINE_MODE: "FALSE"
+    volumes:
+      # attach the relative directory 'data' to the container's /data path
+      - /root/mcplugins:/data
+    networks:
+      - database
+      - minecraft
 
 
   psql_db:
